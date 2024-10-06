@@ -1,0 +1,76 @@
+
+
+
+
+
+.container {
+  /* background-color: burlywood; */
+  width: 900px;
+  min-height: 80vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  outline: none;
+}
+
+.display button{
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
+
+.upload {
+  /* background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2)
+  ); */
+  width: 800px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.upload p{
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: cursive;
+}
+
+.upload .icon {
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.upload button{
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+table{
+  margin: auto;
+}
+
+.tb {
+  width: 300px;
+  margin: 200px auto;
+  justify-content: center;
+  text-align: center;
+}
+
+table th {
+  padding: 10px;
+}

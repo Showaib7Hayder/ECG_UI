@@ -1,0 +1,16 @@
+
+
+
+
+<mat-card *ngIf="signalData$ | async as data">
+  <div class="center-cards">
+  <mat-card-title>{{ data.filename }}</mat-card-title>
+  <mat-card-title>{{ data.diagnosis }}</mat-card-title>
+  <mat-card-title>{{ data.shape }}</mat-card-title>
+  </div>
+  <canvas baseChart
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [type]="lineChartType">
+  </canvas>
+</mat-card>

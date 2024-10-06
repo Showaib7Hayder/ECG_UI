@@ -1,0 +1,67 @@
+
+
+
+<div class="container">
+
+    <div class="display">
+      <h2>Choose signal file to diagnoise results </h2>
+
+    <mat-menu #fileMenu="matMenu">
+      <button mat-menu-item *ngFor="let file of signalFiles" (click)="onChooseSignal(file)">
+        {{ file }}
+      </button>
+    </mat-menu>
+
+    <div class="display">
+      <button mat-button [matMenuTriggerFor]="fileMenu" >
+        <mat-icon>timeline</mat-icon>
+        Select File
+
+      </button>
+    </div>
+
+      <Canvas id="signalChart"></Canvas>
+    </div>
+
+    <div style="padding: 100px;">
+
+    </div>
+
+    <div class="center">
+      <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+      (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+          <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+            <div class="upload">
+
+              <p>Drag and drop Signal file here to get your result</p>
+              <mat-icon class="icon">cloud_upload</mat-icon>
+              <button mat-raised-button (click)="openFileSelector()">
+                <mat-icon>arrow_upward</mat-icon>
+                Upload
+              </button>
+
+            </div>
+          </ng-template>
+      </ngx-file-drop>
+      <div class="upload-table">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>File Name </th>
+                  </tr>
+              </thead>
+              <tbody class="upload-name-style">
+                  <tr *ngFor="let item of files; let i=index">
+                      <td><strong>{{ item.relativePath }}</strong></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+  <!-- <div *ngIf="signalInfo" class="upload-result">
+      <h3>Upload Result:</h3>
+      <pre>{{ signalInfo | json }}</pre>
+  </div> -->
+
+</div>
